@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <security:http auto-config="true">
+        <security:intercept-url pattern="/" access="permitAll" />
+        <security:intercept-url pattern="/logout" access="permitAll" />
+        <security:intercept-url pattern="/login" access="permitAll" />
+        <security:intercept-url pattern="/contacto" access="hasAnyAuthority ('CLIENTE')" />
+        <security:intercept-url pattern="/obtenerCapacitacion" access="hasAnyAuthority ('CLIENTE')" />
+        <security:intercept-url pattern="/crearCapacitacion" access="hasAnyAuthority ('CLIENTE')" />
+        <security:intercept-url pattern="/listarUsuarios" access="hasAnyAuthority ('ADMINISTRATIVO')" />
+        <security:intercept-url pattern="/crearUsuario" access="hasAnyAuthority ('ADMINISTRATIVO')" />
+		<security:intercept-url pattern="/editarUsuario" access="hasAnyAuthority ('ADMINISTRATIVO')" />
+		<security:intercept-url pattern="/crearPago" access="hasAnyAuthority ('ADMINISTRATIVO')" />
+		<security:intercept-url pattern="/listarPagos" access="hasAnyAuthority ('ADMINISTRATIVO')" />
+		<security:intercept-url pattern="/listarVisitas" access="hasAnyAuthority ('PROFESIONAL')" />
+		<security:intercept-url pattern="/listarRevisiones" access="hasAnyAuthority ('PROFESIONAL')" />
+        
+        <security:form-login login-page="/login"
+            authentication-failure-url="/error" username-parameter="nickname"
+            password-parameter="contrasena" />
+        <security:csrf disabled="true" />
+        <security:logout logout-url="/logout"
+            logout-success-url="/logout-success" invalidate-session="true"
+            delete-cookies="JSESSIONID" />
+    </security:http>
+
+    <security:authentication-manager>
+        <security:authentication-provider user-service-ref="customUserDetailsService">
+            <security:password-encoder hash="bcrypt" />
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+    <bean id="customUserDetailsService" class="cl.grupo02.sprintFinal.model.service.CustomUserDetailsService"/> <!-- Reemplaza "tu.paquete" con el paquete correcto -->
+</beans>

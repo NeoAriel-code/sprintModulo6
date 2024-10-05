@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Información del Proyecto -->
+    <groupId>cl.grupo02</groupId>
+    <artifactId>sprintFinal</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>Descripción del proyecto</description>
+    <url>http://github.com/usuario/proyecto</url>
+
+    <!-- Propiedades -->
+    <properties>
+        <!-- Codificación del Código Fuente -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Versión de Java -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <!-- Versiones de Dependencias -->
+        <!-- Java Servlet -->
+        <javax.servlet-version>4.0.1</javax.servlet-version>
+
+        <!-- Java Server Pages -->
+        <javax.servlet.jsp-version>2.3.3</javax.servlet.jsp-version>
+
+        <!-- JavaServer Pages Standard Tag Library -->
+        <javax.servlet.jstl-version>1.2</javax.servlet.jstl-version>
+
+        <!-- Spring Framework -->
+        <org.springframework-version>5.2.8.RELEASE</org.springframework-version>
+
+        <!-- Spring Data JPA -->
+        <org.springframework.data-version>2.3.3.RELEASE</org.springframework.data-version>
+
+        <!-- Spring Security -->
+        <org.springframework.security-version>5.3.4.RELEASE</org.springframework.security-version>
+
+        <!-- Hibernate -->
+        <org.hibernate-version>5.4.20.Final</org.hibernate-version>
+
+        <!-- Hibernate Validator Engine -->
+        <org.hibernate.validator-version>6.1.5.Final</org.hibernate.validator-version>
+
+        <!-- Bean Validation API -->
+        <javax.validation-version>2.0.1.Final</javax.validation-version>
+
+        <!-- Jackson -->
+        <com.fasterxml.jackson.core-version>2.11.2</com.fasterxml.jackson.core-version>
+
+        <!-- Jayway JsonPath -->
+        <com.jayway.jsonpath-version>2.4.0</com.jayway.jsonpath-version>
+
+        <!-- Apache Log4j -->
+        <org.apache.logging.log4j-version>2.13.3</org.apache.logging.log4j-version>
+
+        <!-- JUnit Jupiter -->
+        <org.junit.jupiter-version>5.6.2</org.junit.jupiter-version>
+
+        <!-- Hamcrest -->
+        <org.hamcrest-version>2.2</org.hamcrest-version>
+
+        <!-- Apache Commons DBCP2 -->
+        <commons-dbcp2-version>2.9.0</commons-dbcp2-version>
+    </properties>
+
+    <!-- Dependencias -->
+    <dependencies>
+        <!-- Java Servlet API -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${javax.servlet-version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- JavaServer Pages API -->
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>javax.servlet.jsp-api</artifactId>
+            <version>${javax.servlet.jsp-version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- JavaServer Pages Standard Tag Library -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${javax.servlet.jstl-version}</version>
+        </dependency>
+
+        <!-- Spring Web MVC -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+
+        <!-- Spring Data JPA -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>${org.springframework.data-version}</version>
+        </dependency>
+
+        <!-- Spring Security -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>${org.springframework.security-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${org.springframework.security-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${org.springframework.security-version}</version>
+        </dependency>
+
+        <!-- Hibernate Core -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${org.hibernate-version}</version>
+        </dependency>
+
+        <!-- Hibernate Validator Engine -->
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${org.hibernate.validator-version}</version>
+        </dependency>
+
+        <!-- Bean Validation API -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${javax.validation-version}</version>
+        </dependency>
+
+        <!-- Jackson Databind -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${com.fasterxml.jackson.core-version}</version>
+        </dependency>
+
+        <!-- Jackson Datatype: JSR310 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>${com.fasterxml.jackson.core-version}</version>
+        </dependency>
+
+        <!-- Apache Log4j Core -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${org.apache.logging.log4j-version}</version>
+        </dependency>
+
+        <!-- Apache Log4j SLF4J Binding -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${org.apache.logging.log4j-version}</version>
+        </dependency>
+
+        <!-- Apache Commons DBCP2 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>${commons-dbcp2-version}</version>
+        </dependency>
+
+        <!-- MySQL Connector/J -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.26</version>
+        </dependency>
+
+        <!-- Hamcrest Library -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-library</artifactId>
+            <version>${org.hamcrest-version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- JsonPath Assert -->
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path-assert</artifactId>
+            <version>${com.jayway.jsonpath-version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- JUnit Jupiter Engine -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${org.junit.jupiter-version}</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <!-- Nombre del archivo final de empaquetado -->
+        <finalName>${project.artifactId}-${project.version}</finalName>
+
+        <!-- Listado de Plugins a utilizar -->
+        <plugins>
+            <!-- Plugin para compilar el código fuente -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                    <compilerArgument>-Xlint:all</compilerArgument>
+                    <showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
+                </configuration>
+            </plugin>
+
+            <!-- Plugin para incluir recursos estáticos -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.2.0</version>
+            </plugin>
+
+            <!-- Plugin para empaquetar el proyecto como WAR -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.1</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+
+            <!-- Plugin para ejecutar pruebas -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                    <useFile>false</useFile>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+html body {
+	display: grid !important;
+	min-height: 100vh !important;
+	grid-template-rows: auto 1fr auto !important;
+}
+
+/* body {
+    background-color: #121212; Color de fondo oscuro
+    color: #e0e0e0; Color de texto claro
+    font-family: 'Arial', sans-serif;
+} */
+.error-message {
+	background-color: #f8d7da; /* Fondo rojo claro */
+	color: #721c24; /* Texto rojo oscuro */
+	border: 20px solid #f5c6cb; /* Borde rojo */
+	border-radius: 4px; /* Bordes redondeados */
+	padding: 10px; /* Espaciado interno */
+	margin: 5px; /* Margen arriba y abajo */
+	font-size: 20px; /* Tamaño de fuente */
+	align-items: center;
+}
+
+.error-message strong {
+	margin-right: 0.5rem; /* Espaciado a la derecha del texto fuerte */
+}
+
+.alert-info {
+	padding: 15px;
+	margin: 20px;
+	border: 2px solid #b8daff;
+	border-radius: 4px;
+	background-color: #b3d9ff;
+	color: #004085;
+	text-align: center;
+}
+
+.h2 {
+	font-size: 1.75rem;
+	font-weight: 500;
+	margin: 10px;
+	color: #e0e0e0;
+}
+
+.form-control, .form-select {
+	background-color: #1e1e1e; /* Fondo de los campos de entrada */
+	color: #e0e0e0; /* Texto claro */
+	border: 1px solid #333; /* Borde gris oscuro */
+	border-radius: 4px;
+}
+
+.form-control:focus, .form-select:focus {
+	border-color: #6200ea; /* Color de borde al enfocar */
+	box-shadow: 0 0 0 0.2rem rgba(98, 0, 234, 0.25);
+	/* Sombra al enfocar */
+}
+
+.logout-page {
+	height: 100vh; /* 'vh-100' traducido a CSS nativo */
+	display: flex; /* 'd-flex' */
+	align-items: center; /* 'align-items-center' */
+	justify-content: center; /* 'justify-content-center' */
+	width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+}
+
+.logout-card {
+	box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+	/* 'shadow-lg' equivalente en CSS */
+	background-color: #282828; /* 'bg-dark' de Bootstrap traducido */
+	color: #f8f9fa; /* 'text-light' de Bootstrap traducido */
+	border-radius: 0.25rem; /* 'card' suele tener bordes redondeados */
+	padding: 1.5rem; /* Espacio interno */
+}
+
+
+.btn-primary {
+	border: 1px solid #e0e0e0; /* Borde blanco */
+	border-radius: 12px; /* Bordes redondeados */
+	background-color: transparent; /* Fondo transparente */
+	color: #e0e0e0; /* Texto blanco */
+	/* padding: 10px 20px;  *//* Ajuste del padding interno */
+	font-size: 18px; /* Tamaño del texto */
+	font-weight: 400; /* Texto más grueso */
+	text-align: center; /* Centrar el texto */
+	margin-top: 15px;
+	display: inline-block;
+	cursor: pointer; /* Mostrar el puntero cuando se pasa el ratón */
+	transition: all 0.3s ease; /* Transición para efectos suaves */
+}
+
+.btn-primary:hover {
+	background-color: white; /* Fondo blanco al pasar el ratón */
+	color: black; /* Texto negro al pasar el ratón */
+	border-color: black;
+	
+}
+
+
+.btn-primary2 {
+	border: 1px solid #e0e0e0; /* Borde blanco */
+	border-radius: 10px; /* Bordes redondeados */
+	background-color: transparent; /* Fondo transparente */
+	color: #e0e0e0; /* Texto blanco */
+	font-size: 12px; /* Tamaño del texto */
+	font-weight: 400; /* Texto más grueso */
+	text-align: center; /* Centrar el texto */
+	cursor: pointer; /* Mostrar el puntero cuando se pasa el ratón */
+	transition: all 0.3s ease; /* Transición para efectos suaves */
+}
+
+.btn-primary2:hover {
+	background-color: white; /* Fondo blanco al pasar el ratón */
+	color: black; /* Texto negro al pasar el ratón */
+	border-color: black;
+	
+}
+
+.btn-outline-light {
+	border: 2px solid #e0e0e0; /* Borde blanco */
+	border-radius: 12px; /* Bordes redondeados */
+	background-color: transparent; /* Fondo transparente */
+	color: #e0e0e0; /* Texto blanco */
+	padding: 20px 25px; /* Ajuste del padding interno */
+	font-size: 18px; /* Tamaño del texto */
+	font-weight: 400; /* Texto más grueso */
+	text-align: center; /* Centrar el texto */
+	align-items: center;
+	margin-top: 15px;
+	display: inline-block;
+	cursor: pointer; /* Mostrar el puntero cuando se pasa el ratón */
+	transition: all 0.3s ease; /* Transición para efectos suaves */
+}
+
+.btn-outline-light:hover {
+	background-color: white; /* Fondo blanco al pasar el ratón */
+	color: black; /* Texto negro al pasar el ratón */
+}
+
+.mensaje {
+	margin-top: 20px; /* Ajusta el espacio entre el botón y el mensaje */
+	color: #4cd137; /* Cambia este valor según el color que desees */
+	font-size: 16px;
+}
+
+.invalid-feedback {
+	color: #ff5252; /* Color de los mensajes de error */
+}
+
+.is-invalid {
+	border-color: #ff5252 !important;
+	/* Borde rojo para campos no válidos */
+	background-color: #2b1a1a !important;
+	/* Fondo claro para campos no válidos */
+}
+
+.invisible-item {
+	visibility: hidden;
+}
+
+.navbar {
+	border-bottom: 1px solid #ccc; /* Color y grosor de la línea */
+}
+
+.border-bottom {
+	border-bottom: 2px solid #ccc !important;
+	/* Cambia #ff0000 por el color que desees */
+}
+
+.alert {
+	transition: opacity 0.5s ease-in-out;
+}
+
+.alert.show {
+	opacity: 1;
+}
+
+.alert.d-none {
+	opacity: 0;
+}
+
+.form-container {
+	max-width: 600px;
+	margin: 25px auto;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-title {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.form-label {
+	color: #ffffff;
+}
+
+/* Clase personalizada para un margen más pequeño entre botones */
+.btn-custom {
+    margin-right: 5px;
+}
+
+/* Asegurar que los botones tienen la misma altura */
+.btn {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
